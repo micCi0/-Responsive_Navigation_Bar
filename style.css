@@ -1,0 +1,81 @@
+/* google fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Oswald&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 13px;
+    z-index: 999;
+    background-color: rgb(40, 40, 203);
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 14px;
+margin: 0 10px;
+font-family: 'Open Sans', sans-serif;
+}
+header nav .name a{
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+header nav .menu{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+    font-size: 22px;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper main h1{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+    font-weight: 200;
+    font-size: 35px;
+}
+@media(max-width:700px){
+    header nav .menu{
+        display: block;
+    }
+    header nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        background-color: red;
+        top: 80%;
+        left: -1000%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: all ease-in 0.55s;
+    }
+    header nav ul.show{ /* class list for show a menu */
+        left: 0;
+    }
+    header nav ul li{
+        margin: 4% 0;
+    }
+}
